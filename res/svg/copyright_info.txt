@@ -1,0 +1,17 @@
+
+
+Tobias Ritter aka t-ryder provides the new icons for the 
+Android app "AdStop" aka "personalHTTPproxy" for Android (source by Ingo Zenz)
+under the GNU GENERAL PUBLIC LICENSE Version 2 if compiled into Software.
+
+Used from personalHTTPproxy version 1.57.0
+
+March 4. 2016, Landau/Germany
+
+http://t-ryder.de
+
+
+Credits/Inspiration: 
+
+The "shield" icon part is based on work by Curtis Free, GB • http://creativecommons.org/licenses/by/3.0/us/
+The "globe" icon part is based on work by Google Inc. • https://creativecommons.org/licenses/by/4.0/
