@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.util.Hashtable;
 
@@ -56,25 +56,24 @@ public class Logger implements LoggerInterface {
 	}
 	
 
-	@Override
 	public void logLine(String txt) {
 		System.out.println(txt);
 		
 	}
 
-	@Override
+
 	public void logException(Exception e) {
 		e.printStackTrace();
 		
 	}
 
-	@Override
+
 	public void log(String txt) {
 		System.out.print(txt);
 		
 	}
 
-	@Override
+
 	public void closeLogger() {
 		// TODO Auto-generated method stub
 		

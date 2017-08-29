@@ -19,14 +19,13 @@
  Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
  Contact:i.z@gmx.net 
  */
-package httpproxy.android;
+package main.java.de.sj4.prog.httpproxy.android;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,11 +38,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-import proxy.HttpProxy;
-import util.AsyncBulkLogger;
-import util.Logger;
-import util.LoggerInterface;
-import util.Utils;
+import android.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -61,6 +56,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import main.java.de.sj4.prog.proxy.HttpProxy;
+import de.sj4.prog.util.AsyncBulkLogger;
+import de.sj4.prog.util.Logger;
+import de.sj4.prog.util.LoggerInterface;
+import de.sj4.prog.util.Utils;
 
 public class HttpProxyActivity extends Activity implements OnClickListener, LoggerInterface {
 
@@ -103,7 +103,6 @@ public class HttpProxyActivity extends Activity implements OnClickListener, Logg
 			m_logStr = logStr;
 		}
 
-		@Override
 		public void run() {
 			logSize = logSize + m_logStr.length();
 			logOutView.append(m_logStr);
@@ -600,25 +599,21 @@ public class HttpProxyActivity extends Activity implements OnClickListener, Logg
 		startService(SERVICE);
 	}
 
-	@Override
 	public void logLine(String txt) {
 		runOnUiThread(new MyUIThreadLogger(txt + "\n"));
 	}
 
-	@Override
 	public void logException(Exception e) {
 		StringWriter str = new StringWriter();
 		e.printStackTrace(new PrintWriter(str));
 		runOnUiThread(new MyUIThreadLogger(str.toString() + "\n"));
 	}
 
-	@Override
 	public void log(String txt) {
 		runOnUiThread(new MyUIThreadLogger(txt));
 	}
 
 
-	@Override
 	public void closeLogger() {
 		// TODO Auto-generated method stub
 		

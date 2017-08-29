@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 public interface TimeoutListener {
 	

@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util.conpool;
+package de.sj4.prog.util.conpool;
 
 import java.io.IOException;
 import java.io.InputStream;

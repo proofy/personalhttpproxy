@@ -20,7 +20,7 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package util.http;
+package de.sj4.prog.util.http;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
-import util.Utils;
+import de.sj4.prog.util.Utils;
 
 public class HttpHeader {
 

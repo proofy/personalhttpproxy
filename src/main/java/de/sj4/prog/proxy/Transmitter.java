@@ -21,12 +21,14 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package proxy;
+package de.sj4.prog.proxy;
 
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 
-import util.Logger;
+import de.sj4.prog.util.Logger;
 
 
 public class Transmitter implements Runnable {

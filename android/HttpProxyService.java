@@ -19,13 +19,9 @@
  Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
  Contact:i.z@gmx.net 
  */
-package httpproxy.android;
+package main.java.de.sj4.prog.httpproxy.android;
 
 
-import proxy.HttpProxy;
-import util.ExecutionEnvironment;
-import util.ExecutionEnvironmentInterface;
-import util.Logger;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -34,6 +30,10 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
+import main.java.de.sj4.prog.proxy.HttpProxy;
+import de.sj4.prog.util.ExecutionEnvironment;
+import de.sj4.prog.util.ExecutionEnvironmentInterface;
+import de.sj4.prog.util.Logger;
 
 public class HttpProxyService extends Service implements ExecutionEnvironmentInterface {
 
@@ -95,13 +95,11 @@ public class HttpProxyService extends Service implements ExecutionEnvironmentInt
 		return START_STICKY;
 	}
 
-	@Override
 	public void wakeLock() {
 		wakeLock = ((PowerManager) getSystemService(Context.POWER_SERVICE)).newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "My Tag");
 		wakeLock.acquire();			
 	}
 
-	@Override
 	public void releaseWakeLock() {
 		WakeLock wl = wakeLock;
 		if (wl != null)

@@ -1,4 +1,4 @@
-package util;
+package de.sj4.prog.util;
 
 import java.io.IOException;
 

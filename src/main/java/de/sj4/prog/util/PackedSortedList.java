@@ -21,7 +21,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -67,7 +67,7 @@ public class PackedSortedList implements List, RandomAccess {
 		return Collections.binarySearch(this, key);		
 	}
 
-	@Override
+
 	public boolean add(Object key) {
 
 		int pos = -(binarySearch(key) + 1);
@@ -88,13 +88,13 @@ public class PackedSortedList implements List, RandomAccess {
 		count++;
 	}
 
-	@Override
+
 	public void add(int arg0, Object arg1) {
 		throw new UnsupportedOperationException();
 
 	}
 
-	@Override
+
 	public boolean addAll(Collection collection) {
 
 		Iterator it = collection.iterator();
@@ -106,12 +106,12 @@ public class PackedSortedList implements List, RandomAccess {
 
 	}
 
-	@Override
+
 	public boolean addAll(int arg0, Collection arg1) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
+
 	public void clear() {
 		throw new UnsupportedOperationException();
 
@@ -139,7 +139,7 @@ public class PackedSortedList implements List, RandomAccess {
 			
 	}	
 
-	@Override
+
 	public boolean contains(Object key) {
 		int pos = -1;
 		if (!inMemory) {
@@ -158,12 +158,12 @@ public class PackedSortedList implements List, RandomAccess {
 		return (pos > -1);
 	}
 	
-	@Override
+
 	public boolean containsAll(Collection arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
+
 	public Object get(int pos) {
 		if (pos >= count)
 			return null;
@@ -190,77 +190,65 @@ public class PackedSortedList implements List, RandomAccess {
 		}
 	}
 
-	@Override
+
 	public int indexOf(Object arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		return (count ==0);
 	}
 
-	@Override
+
 	public Iterator iterator() {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public int lastIndexOf(Object arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public ListIterator listIterator() {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public ListIterator listIterator(int arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public boolean remove(Object arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public Object remove(int arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public boolean removeAll(Collection arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public boolean retainAll(Collection arg0) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public Object set(int arg0, Object arg1) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public int size() {
 		return count;
 	}
 
-	@Override
 	public List subList(int arg0, int arg1) {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public Object[] toArray() {
 		throw new UnsupportedOperationException();
 	}
 
-	@Override
 	public Object[] toArray(Object[] arg0) {
 		throw new UnsupportedOperationException();
 	}

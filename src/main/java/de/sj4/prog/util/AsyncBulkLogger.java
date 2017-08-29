@@ -20,7 +20,7 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.io.IOException;
 import java.io.PipedInputStream;
@@ -68,7 +68,6 @@ public class AsyncBulkLogger implements LoggerInterface, Runnable {
 	}
 
 
-	@Override
 	public void logLine(String txt) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -80,7 +79,6 @@ public class AsyncBulkLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
 	public void logException(Exception e) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -92,7 +90,6 @@ public class AsyncBulkLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
 	public void log(String txt) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -104,7 +101,6 @@ public class AsyncBulkLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
 	public void run() {
 
 		byte[] buf = new byte[4096];

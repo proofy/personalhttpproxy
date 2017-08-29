@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;

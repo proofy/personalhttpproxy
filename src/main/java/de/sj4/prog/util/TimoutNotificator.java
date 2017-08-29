@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.util.HashSet;
 import java.util.Vector;
@@ -59,7 +59,6 @@ public class TimoutNotificator implements Runnable {
     }
 	
 	
-	@Override
 	public void run() {		
 		Vector toListeners = new Vector();
 		boolean exitThread = false;

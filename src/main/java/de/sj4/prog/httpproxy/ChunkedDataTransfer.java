@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package httpproxy;
+package de.sj4.prog.httpproxy;
 
 import java.io.IOException;
 import java.io.OutputStream;

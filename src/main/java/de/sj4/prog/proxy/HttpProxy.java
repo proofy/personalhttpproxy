@@ -20,9 +20,7 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package proxy;
-
-import httpproxy.HttpProxyServer;
+package de.sj4.prog.proxy;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -48,11 +46,11 @@ import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.StringTokenizer;
 
-import proxy.BlockedHosts;
-import util.ExecutionEnvironment;
-import util.FileLogger;
-import util.Logger;
-import util.LoggerInterface;
+import de.sj4.prog.httpproxy.HttpProxyServer;
+import de.sj4.prog.util.ExecutionEnvironment;
+import de.sj4.prog.util.FileLogger;
+import de.sj4.prog.util.Logger;
+import de.sj4.prog.util.LoggerInterface;
 
 
 public class HttpProxy implements Runnable, LoggerInterface
@@ -99,7 +97,6 @@ public class HttpProxy implements Runnable, LoggerInterface
 			}
 		}
 		
-		@Override
 		public void run() {
 
 			synchronized (MAINLOOP) {
@@ -239,7 +236,6 @@ public class HttpProxy implements Runnable, LoggerInterface
 		return new HttpProxy(clientSocket);
 	}
 
-	@Override
 	public void run() {
 		if (this == MAINLOOP)
 			initAndRunListenerLoop();
@@ -479,7 +475,9 @@ public class HttpProxy implements Runnable, LoggerInterface
 			Logger.getLogger().logLine("***Initializing PersonalHttpProxy Version "+VERSION+"!***");
 			
 			Properties props = new Properties();
-			FileInputStream in = new FileInputStream(WORKDIR + "httpproxy.conf");
+			InputStream in = null; 
+			//FileInputStream in = new FileInputStream(WORKDIR + "httpproxy.conf");
+			in = getClass().getResourceAsStream("httpproxy.conf");
 			props.load(in);
 			in.close();
 			
@@ -696,23 +694,19 @@ public class HttpProxy implements Runnable, LoggerInterface
 		
 	}
 
-	@Override
 	public void logLine(String txt) {
 		System.out.println(txt);
 	}
 
-	@Override
 	public void logException(Exception e) {
 		e.printStackTrace(System.out);
 
 	}
 
-	@Override
 	public void log(String txt) {
 		System.out.print(txt);
 	}
 
-	@Override
 	public void closeLogger() {
 		// TODO Auto-generated method stub
 		

@@ -21,7 +21,7 @@
  */
 
 
-package util;
+package de.sj4.prog.util;
 
 import java.util.Calendar;
 
@@ -78,7 +78,6 @@ public class DateRetriever implements Runnable {
 		
 	}
 
-	@Override
 	public synchronized void run() {
 		_thread = Thread.currentThread();
 		

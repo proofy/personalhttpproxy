@@ -19,7 +19,7 @@
  Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
  Contact:i.z@gmx.net 
  */
-package util;
+package de.sj4.prog.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -74,19 +74,16 @@ public class HugePackedSet implements Set {
 		slotSizes = null; //save memory
 	}
 
-	@Override
 	public boolean add(Object obj) {
 		boolean added = subsets[(int) (Math.abs( obj.hashCode()) %  slotCount) ].add(obj);
 		if (added) count ++;
 		return added;
 	}
 
-	@Override
 	public boolean addAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public void clear() {
 		slotSizes = new int[slotCount];
 		for (int i = 0; i < slotCount; i++) {
@@ -95,52 +92,42 @@ public class HugePackedSet implements Set {
 		}
 	}
 
-	@Override
 	public boolean contains(Object obj) {
 		return subsets[ (Math.abs( obj.hashCode()) %  slotCount) ].contains(obj);
 	}
 
-	@Override
 	public boolean containsAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public boolean isEmpty() {
 		return count ==0;
 	}
 
-	@Override
 	public Iterator iterator() {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public boolean remove(Object arg0) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public boolean removeAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public boolean retainAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
-	@Override
 	public int size() {
 		return count;
 	}
 
-	@Override
 	public Object[] toArray() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public Object[] toArray(Object[] arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}

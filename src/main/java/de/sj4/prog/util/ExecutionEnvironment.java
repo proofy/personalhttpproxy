@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 public class ExecutionEnvironment implements ExecutionEnvironmentInterface {
 	
@@ -40,13 +40,11 @@ public class ExecutionEnvironment implements ExecutionEnvironmentInterface {
 	}
 	
 	
-	@Override
 	public void wakeLock() {
 		// by default do nothing
 		
 	}
 
-	@Override
 	public void releaseWakeLock() {
 		// by default do nothing		
 	}

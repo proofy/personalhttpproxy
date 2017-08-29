@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package util.conpool;
+package de.sj4.prog.util.conpool;
 
 
 import java.io.IOException;
@@ -35,10 +35,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Vector;
 
-import util.Logger;
-import util.TimeoutListener;
-import util.TimeoutTime;
-import util.TimoutNotificator;
+import de.sj4.prog.util.Logger;
+import de.sj4.prog.util.TimeoutListener;
+import de.sj4.prog.util.TimeoutTime;
+import de.sj4.prog.util.TimoutNotificator;
 
 
 public class Connection implements TimeoutListener {
@@ -259,7 +259,6 @@ public class Connection implements TimeoutListener {
 	}
 
 
-	@Override
 	public void timeoutNotification() {
 		
 		boolean found = false;
@@ -278,7 +277,6 @@ public class Connection implements TimeoutListener {
 			release(false);
 	}
 
-	@Override
 	public long getTimoutTime() {
 		// TODO Auto-generated method stub
 		return timeout.getTimeout();

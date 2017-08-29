@@ -19,12 +19,13 @@
  Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
  Contact:i.z@gmx.net 
  */
-package httpproxy.android;
+package main.java.de.sj4.prog.httpproxy.android;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
+
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,7 +34,7 @@ import android.os.Environment;
 
 public class BootUpReceiver extends BroadcastReceiver{
 
-    @Override
+	@Override
     public void onReceive(Context context, Intent intent) {
     	Properties config;
     	if ((config = getConfig()) != null && Boolean.parseBoolean(config.getProperty("AUTOSTART", "false"))) {
@@ -60,5 +61,6 @@ public class BootUpReceiver extends BroadcastReceiver{
 			return null;
 		}
     }
+
 
 }

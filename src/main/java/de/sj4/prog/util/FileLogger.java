@@ -20,7 +20,7 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package util;
+package de.sj4.prog.util;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -109,7 +109,7 @@ public class FileLogger implements LoggerInterface, Runnable {
 		timeStampEnabled = enable;
 	}
 
-	@Override
+
 	public void logLine(String txt) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -121,7 +121,7 @@ public class FileLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
+
 	public void logException(Exception e) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -133,7 +133,7 @@ public class FileLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
+
 	public void log(String txt) {
 		synchronized (psout) {
 			synchronized (pin) {
@@ -166,7 +166,7 @@ public class FileLogger implements LoggerInterface, Runnable {
 		}
 	}
 
-	@Override
+
 	public void run() {
 
 		byte[] buf = new byte[2048];

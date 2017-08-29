@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package httpproxy;
+package de.sj4.prog.httpproxy;
 
 
 import java.io.ByteArrayInputStream;
@@ -28,8 +28,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.SocketTimeoutException;
 
-import util.Logger;
-import util.http.HttpHeader;
+import de.sj4.prog.util.Logger;
+import de.sj4.prog.util.http.HttpHeader;
 
 
 public class HttpProxyResponse extends InputStream  {

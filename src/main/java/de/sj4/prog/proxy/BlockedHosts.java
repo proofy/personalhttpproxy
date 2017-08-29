@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package proxy;
+package de.sj4.prog.proxy;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -28,26 +28,23 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 
-import util.HugePackedSet;
-import util.LRUCache;
-import util.ObjectPackagingManager;
-import util.Utils;
+import de.sj4.prog.util.HugePackedSet;
+import de.sj4.prog.util.LRUCache;
+import de.sj4.prog.util.ObjectPackagingManager;
+import de.sj4.prog.util.Utils;
 
 public class BlockedHosts implements Set{
 
 	private static class MyPackagingManager implements ObjectPackagingManager {
 
-		@Override
 		public int objectSize() {		
 			return 8;
 		}
 
-		@Override
 		public Object bytesToObject(byte[] data, int offs){
 			return Utils.byteArrayToLong(data, offs);
 		}
 
-		@Override
 		public void objectToBytes(Object object, byte[] data, int offs) {
 			Utils.writeLongToByteArray((Long)object,  data,  offs);		
 		}
@@ -145,12 +142,10 @@ public class BlockedHosts implements Set{
 		blockedHostsHashes.finalPrepare();
 	}
 
-	@Override
 	public boolean add(Object host) {
 		return blockedHostsHashes.add(Utils.getLongStringHash((String) host));
 	}
 
-	@Override
 	public boolean contains(Object object) {
 
 		try {
@@ -222,53 +217,43 @@ public class BlockedHosts implements Set{
 		blockedHostsHashes.migrateTo(hostFilter.blockedHostsHashes);
 	}
 
-	@Override
 	public boolean addAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean containsAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return blockedHostsHashes.isEmpty();
 	}
 
-	@Override
 	public Iterator iterator() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean remove(Object object) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean removeAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean retainAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public int size() {
 		return blockedHostsHashes.size();
 	}
 
-	@Override
 	public Object[] toArray() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public Object[] toArray(Object[] array) {
 		throw new UnsupportedOperationException("Not supported!");
 	}

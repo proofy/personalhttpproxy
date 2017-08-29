@@ -20,7 +20,7 @@
  Contact:i.z@gmx.net 
  */
 
-package httpproxy;
+package de.sj4.prog.httpproxy;
 
 
 import java.io.BufferedInputStream;
@@ -35,14 +35,14 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.Set;
 
-import util.DateRetriever;
-import util.Logger;
-import util.LoggerInterface;
-import util.TimeoutListener;
-import util.TimeoutTime;
-import util.TimoutNotificator;
-import util.conpool.Connection;
-import util.http.HttpHeader;
+import de.sj4.prog.util.DateRetriever;
+import de.sj4.prog.util.Logger;
+import de.sj4.prog.util.LoggerInterface;
+import de.sj4.prog.util.TimeoutListener;
+import de.sj4.prog.util.TimeoutTime;
+import de.sj4.prog.util.TimoutNotificator;
+import de.sj4.prog.util.conpool.Connection;
+import de.sj4.prog.util.http.HttpHeader;
 
 public class HttpProxyServer extends Socket implements TimeoutListener {
 		
@@ -344,12 +344,10 @@ public class HttpProxyServer extends Socket implements TimeoutListener {
 		//nothing		
 	}
 
-	@Override
 	public void timeoutNotification() {
 		close();		
 	}
 
-	@Override
 	public long getTimoutTime() {	
 		return idleTimeout.getTimeout();
 	}

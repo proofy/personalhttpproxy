@@ -20,7 +20,7 @@ Find the latest version at http://www.zenz-solutions.de/personalhttpproxy
 Contact:i.z@gmx.net 
  */
 
-package proxy;
+package de.sj4.prog.proxy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,8 +32,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
 
-import util.LRUCache;
-import util.Utils;
+import de.sj4.prog.util.LRUCache;
+import de.sj4.prog.util.Utils;
 
 public class BlockedUrls implements Set {
 
@@ -110,7 +110,6 @@ public class BlockedUrls implements Set {
 		}
 	}
 
-	@Override
 	public boolean add(Object host) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
@@ -126,7 +125,6 @@ public class BlockedUrls implements Set {
 	}
 	
 	
-	@Override
 	public boolean contains(Object object) {
 		
 		// Positive and negative URL match caches are used as wildcard matching is expensive.
@@ -221,53 +219,43 @@ public class BlockedUrls implements Set {
 		okCache.clear();
 	}
 
-	@Override
 	public boolean addAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean containsAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public Iterator iterator() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean remove(Object object) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean removeAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public boolean retainAll(Collection arg0) {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public int size() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public Object[] toArray() {
 		throw new UnsupportedOperationException("Not supported!");
 	}
 
-	@Override
 	public Object[] toArray(Object[] array) {
 		throw new UnsupportedOperationException("Not supported!");
 	}

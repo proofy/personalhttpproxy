@@ -21,7 +21,7 @@
  */
 
 
-package httpproxy;
+package de.sj4.prog.httpproxy;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
